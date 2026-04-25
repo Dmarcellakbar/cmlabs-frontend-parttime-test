@@ -18,7 +18,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link href="/" className="hover:text-orange-500">Home</Link>
             <Link href="/" className="hover:text-orange-500">Foods</Link>
             <Link href="/" className="hover:text-orange-500">Ingredients</Link>
-            <Link href="/" className="hover:text-orange-500">Local Culinary</Link>
           </nav>
 
         </div>
