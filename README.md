@@ -1,37 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍽️ Meal Explorer App
 
-## Getting Started
+A modern web application to explore meals and ingredients using the **TheMealDB API**.
+Built with **Next.js**, **TypeScript**, and optimized UI/UX for fast performance.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+* 🔍 Search ingredients in real-time (debounced)
+* 🍳 Browse meals by ingredient
+* 📄 Detailed meal page (ingredients, instructions, video)
+* 🎥 Embedded YouTube cooking tutorials
+* ⚡ Optimized image loading with Next.js
+* 📱 Fully responsive design
+* 📄 Pagination for better performance
+* 🧠 Type-safe API integration (no `any`)
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework**: Next.js (App Router)
+* **Language**: TypeScript
+* **Styling**: Tailwind CSS
+* **Data Fetching**: Custom Hooks
+* **API**: TheMealDB
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx                # Dashboard (ingredients)
+│   ├── ingredients/
+│   │   └── [name]/page.tsx    # Meals by ingredient
+│   ├── meals/
+│   │   └── [id]/page.tsx      # Meal detail
+│
+├── features/
+│   ├── ingredient/
+│   │   ├── hooks/
+│   │   └── types/
+│   ├── meal/
+│   │   ├── hooks/
+│   │   └── types/
+│
+├── shared/
+│   ├── components/
+│   │   └── Breadcrumb.tsx
+│   └── utils/
+│       └── useDebounce.ts
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/Dmarcellakbar/cmlabs-frontend-parttime-test.git
+cd cmlabs-frontend-parttime-test
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App will run on:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚙️ Configuration
 
-To learn more about Next.js, take a look at the following resources:
+### Enable external images (Next.js)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```js
+// next.config.js
+module.exports = {
+  images: {
+    domains: ['www.themealdb.com'],
+  },
+};
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚡ Performance Optimization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Pagination to limit DOM rendering
+* Debounced search input
+* `next/image` with `unoptimized` for faster dev experience
+* Lazy rendering for better UX
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# cmlabs-frontend-parttime-test
+---
+
+## 📌 Future Improvements
+
+* 🔄 Infinite scroll
+* ⚡ React Query integration
+* 🎨 Advanced UI (shimmer loading, skeleton)
+* ⭐ Favorites / Bookmark feature
+* 🌐 Deployment (Vercel)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the project
+2. Create your feature branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Marcell**
+GitHub: https://github.com/Dmarcellakbar
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
